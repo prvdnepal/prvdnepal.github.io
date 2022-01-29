@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Podway Nepal</title>
+    <link rel="stylesheet" href="design/design.css">
+    <link rel="icon" 
+      type="image/jpeg" 
+      href="imageassets/websiteassets/logo.jpeg" />
+</head>
+<body>
+    <div class="topnav">
+
+        <img src="imageassets/websiteassets/logo.jpeg" class="logoleft"> 
+        <a href="index.html">Home</a>
+        <a href="transportation-in-nepal.html">Transportation in Nepal</a>
+        <a class="active" href="#">Podway Solution</a>
+        <a href="unitsky.html">Unitsky</a>
+        <a href="benefits-to-nepal.html">Benefits to Nepal</a>
+        <a href="executiveteam.html">Executive Team</a>
+        <a href="contactus.html">Contact Us</a>
+        <div class="sociallink">
+            <img src="imageassets/websiteassets/facebook.png" class="sociallinkimage"> 
+            <img src="imageassets/websiteassets/twitter.png" class="sociallinkimage"> 
+            <img src="imageassets/websiteassets/linkedin.png" class="sociallinkimage"> 
+            <img src="imageassets/websiteassets/youtube.png" class="sociallinkimage"> 
+            <img src="imageassets/websiteassets/instagram.png" class="sociallinkimage"> 
+        </div>
+        <img src="imageassets/homepagesliders/slider2.png" alt="Cinque Terre" width="1000" height="300" class="titleimg">
+
+        <button id="myBtn"></button>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            
+            <img src="imageassets/homepagesliders/slider1.png" alt="Cinque Terre" width="1000" height="300" class="contentimg" id="contentImg">
+            <p id = "modalContent"  class="contentdetails"></p>
+        </div>
+
+</div>
+
+        <div class="content-container">
+            <h1 class="contentheader">
+                We need a transportation solution that meets everyone's needs. <br>
+                The ideal solution will be:
+            </h1>
+                 <p class="contentlist" onclick="openModal(0)"> 
+                    Private and convenient
+                </p>
+                <p class="contentlist" onclick="openModal(1)"> 
+                    High capacity
+               </p>
+               <p class="contentlist" onclick="openModal(2)"> 
+                High speed and extremely safe
+                </p>
+                <p class="contentlist" onclick="openModal(3)"> 
+                    Sustainable
+               </p>
+               <p class="contentlist" onclick="openModal(4)"> 
+                Affordable for everyone
+                </p>
+          </div>
+          <div class = "footer">
+            <p><span>&#169;</span> All Rights Reserved, Podway Nepal 2021. <a href="privacyandlegal.html">Privacy and Legal</a></p> 
+            <div class="footersociallink">
+              <img src="imageassets/websiteassets/facebook.png" class="footersociallinkimage"> 
+              <img src="imageassets/websiteassets/twitter.png" class="footersociallinkimage"> 
+              <img src="imageassets/websiteassets/linkedin.png" class="footersociallinkimage"> 
+              <img src="imageassets/websiteassets/youtube.png" class="footersociallinkimage"> 
+              <img src="imageassets/websiteassets/instagram.png" class="footersociallinkimage"> 
+              </div>
+          </div>
+          </div>
+</body>
+</html>
+
+<script>
+
+    var modal = document.getElementById("myModal");
+    
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+    function openModal(index) {
+
+        modal.style.display = "block";
+
+        switch(index) {
+        case 0:
+        document.getElementById("modalContent").innerHTML = "Until now, only family automobiles have offered transportation that is both private and convenient. Their cars are always available to take them anywhere they want at any time. Further, closed cars private privacy for conversations as well as a secure place to store their luggage. However, the total cost of car ownership puts a severe strain on the budgets of most households – and most families can simply not afford to buy and operate a car. An ideal transportation system will provide most of the same advantages of a family car without the burden of ownership and maintenance";
+        document.getElementById("contentImg").src="imageassets/podwaysolution/content1.png";
+            break;
+        case 1:
+        document.getElementById("modalContent").innerHTML = "The vans and busses in our major cities certainly carry many passengers at the same time, but they are rarely comfortable. The busses usually carry far more people than they were designed to carry. They are hot, dirty, and noisy. Getting onto and off of the busses is a logistical challenge. They are slow because busses must stop at every street corner. An ideal transportation system would carry of passengers without the problems we just listed. ";
+        document.getElementById("contentImg").src="imageassets/podwaysolution/content2.png";
+            break;
+        case 2:
+        document.getElementById("modalContent").innerHTML =  "Airplanes are recognized for their very high speed. Further, air travel enjoys the lowest number of deaths or injuries per passenger kilometer compared with any other form of transportation. Air travel excels at high speed and extraordinary safety. Air travelers must still take ground transportation to get to the airport. Passengers often get to the airport an hour or two early to collect their boarding passes, check their luggage, and pass through invasive security checks. On arrival, passengers must wait for their luggage to be delivered on a belt and may even be required to pass through a second full body scan on the way out of the airport. Of course, they need to take a bus or taxi to get to their final destination. This arduous and stressful process makes air travel unattractive whenever there is a viable alternative. Factoring in this check-in and check-out process lengthens the actual travel time dramatically. An ideal transportation system would provide the effective speed and safety we’ve come to expect from air travel – when measured from an initial start point to the final destination.";
+        document.getElementById("contentImg").src="imageassets/podwaysolution/content3.png";
+               break;
+        case 3:
+        document.getElementById("modalContent").innerHTML =  "Environmentalists are fond of listing the problems with our current means of transportation. Cities generally allocate 20% to 25% of their ground space to streets, roads, ramps, parking garages, car and truck sales offices, and the myriad of repair shops parts supply stores. Car exhausts have been identified as one of the major sources of environmental pollution. The numbers of deaths and personal injuries directly attributed to traffic accidents we see today would never be tolerated if we were designing a transportation system today. Transportation must be high speed and extremely safe Transportation must provide high capacityIn other words, it is simply not sustainable. An ideal transportation system would not compete with city residents and businesses for land use. It would not permit unrestrained deaths and injuries. It would not consume fossil fuels. In other words, an ideal transportation system would be sustainable for many centuries to come.";
+        document.getElementById("contentImg").src="imageassets/podwaysolution/content4.png";
+        break;
+        case 4:
+        document.getElementById("modalContent").innerHTML =  "In many developed countries, transportation is the second largest budget item – second only to housing. In Nepal, it probably represents an even larger percentage of most families’ monthly budget. Transportation expenses are so great that, in many cases, it prohibits people from studying at schools that would promote their career prospects. It prevents them from taking employment in other parts of the city. Kathmandu buys fruits and vegetables from India rather than crops in eastern Nepal because the transportation costs are too expensive. People in rural parts of the country cannot access healthcare in Kathmandu because they cannot afford the trip. An ideal transportation system would be affordable to all but the poorest people. One target might be to price the cost of transportation to be competitive with the cost per passenger kilometer of a typical small motorcycle.";
+        document.getElementById("contentImg").src="imageassets/podwaysolution/content5.png";
+        break;
+        default:
+            break;
+            // code block
+    } 
+}
+
+    </script>

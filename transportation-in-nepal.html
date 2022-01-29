@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Podway Nepal</title>
+    <link rel="stylesheet" href="design/design.css">
+    <link rel="icon" 
+      type="image/jpeg" 
+      href="imageassets/websiteassets/logo.jpeg" />
+</head>
+<body>
+    <div class="topnav">
+
+        <img src="imageassets/websiteassets/logo.jpeg" class="logoleft"> 
+        <a href="index.html">Home</a>
+        <a class="active" href="#">Transportation in Nepal</a>
+        <a href="podwaysolution.html">Podway Solution</a>
+        <a href="unitsky.html">Unitsky</a>
+        <a href="benefits-to-nepal.html">Benefits to Nepal</a>
+        <a href="executiveteam.html">Executive Team</a>
+        <a href="contactus.html">Contact Us</a>
+        <div class="sociallink">
+            <img src="imageassets/websiteassets/facebook.png" class="sociallinkimage"> 
+            <img src="imageassets/websiteassets/twitter.png" class="sociallinkimage"> 
+            <img src="imageassets/websiteassets/linkedin.png" class="sociallinkimage"> 
+            <img src="imageassets/websiteassets/youtube.png" class="sociallinkimage"> 
+            <img src="imageassets/websiteassets/instagram.png" class="sociallinkimage"> 
+        </div>
+
+        <img src="imageassets/homepagesliders/slider1.png" alt="Cinque Terre" width="1000" height="300" class="titleimg">
+
+
+        <button id="myBtn"></button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            
+            <img src="imageassets/homepagesliders/slider1.png" alt="Cinque Terre" width="1000" height="300" class="contentimg">
+            <p id = "modalContent"  class="contentparagraph"></p>
+        </div>
+
+</div>
+
+        <div class="content-container">
+            <h1 class="contentheader">
+              Kathmandu podway has a clear transportation vision for our capitol and our country
+            </h1>
+                 <p class="contentlist" onclick="openModal(0)"> 
+                     Readily Available
+                </p>
+                <p class="contentlist" onclick="openModal(1)"> 
+                   Affordable Service
+               </p>
+               <p class="contentlist" onclick="openModal(2)"> 
+                    24 Hour-a-day Service
+                </p>
+                <p class="contentlist" onclick="openModal(3)"> 
+                    Fast service -- 65 kilometers/hour in the city
+               </p>
+               <p class="contentlist" onclick="openModal(4)"> 
+                 Safety is paramount
+                </p>
+                <p class="contentlist" onclick="openModal(5)"> 
+                   No Pollution
+                </p>
+                <p class="contentlist" onclick="openModal(6)"> 
+                    500 Kilometers an hour between cities
+                 </p>
+          </div>
+          <div class = "footer">
+            <p><span>&#169;</span> All Rights Reserved, Podway Nepal 2021. <a href="privacyandlegal.html">Privacy and Legal</a></p> 
+            <div class="footersociallink">
+              <img src="imageassets/websiteassets/facebook.png" class="footersociallinkimage"> 
+              <img src="imageassets/websiteassets/twitter.png" class="footersociallinkimage"> 
+              <img src="imageassets/websiteassets/linkedin.png" class="footersociallinkimage"> 
+              <img src="imageassets/websiteassets/youtube.png" class="footersociallinkimage"> 
+              <img src="imageassets/websiteassets/instagram.png" class="footersociallinkimage"> 
+              </div>
+          </div>
+          </div>
+</body>
+</html>
+
+<script>
+
+    var modal = document.getElementById("myModal");
+    
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+    function openModal(index) {
+
+        modal.style.display = "block";
+
+        switch(index) {
+        case 0:
+        document.getElementById("modalContent").innerHTML = "In Kathmandu, we will build a network of podways that will provide transportation to 85% of the households in the Kathmandu Valley within 500 meters of their front doors. Our goal is to make transportation readily available to everyone";
+            // code block
+            break;
+        case 1:
+        document.getElementById("modalContent").innerHTML = "We will price our fares that compete with the total-cost-of-ownership of a 150 cc motorbike per passenger/kilometre. Not only does this make the podway affordable, it does not require passengers to spend time servicing their motorbikes";
+            // code block
+            break;
+        case 2:
+        document.getElementById("modalContent").innerHTML =  "We will provide service to all stations at all times of the day or night. We will increase the number of cars available during peak hours and reduce the number of cars at during low periods. We will provide service to every platform at least every 30 minutes.";
+        break;
+        case 3:
+        document.getElementById("modalContent").innerHTML =  "Our pods will travel at 65 kilometers/hour in the city. Our pods will travel on an elevated guide path that will not stop at intersections or be hampered by traffic jams. Our pods will not stop at platforms unless there is a need to drop or pickup passengers. This speeds passenger flow considerably";
+        break;
+        case 4:
+        document.getElementById("modalContent").innerHTML =  "According to current statistics, Kathmandu registers more than 247 traffic deaths a year. Further, the police report hundreds of thousands of traffic injuries a year. The Podway, on the other hand, is designed to eliminate all deaths and injuries.";
+        break;
+        case 5:
+        document.getElementById("modalContent").innerHTML =  "The podways operate on electrical power provided by hydroelectric sources generated in country. The elevated guideways and the pods are designed to operate for decades. Every component of the system is designed to be pollution free to the greatest extent possible with the technologies that are currently available";
+        break;
+        case 6:
+        document.getElementById("modalContent").innerHTML =  "We will build pods that will travel up to 500 km per hour between cities; this speed competes quite favorably with air travel when the cost of checkin is factored in. Further, we had easily schedule trips every hour or so. These frequent trips are far more convenient than flights that are scheduled only once or twice a day. Further, we could easily schedule quick stops at en-route destinations that may be convenient otherwise. ";
+        break;
+        default:
+            break;
+            // code block
+    } 
+}
+
+    </script>

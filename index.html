@@ -1,6 +1,151 @@
+<!DOCTYPE html>
 <html>
+<head>
+    <title>PRVD Nepal</title>
+    <link rel="stylesheet" href="design/design.css">
+    <link rel="stylesheet" href="design/sliderdesign.css">
+    <link rel="icon" 
+      type="image/png" 
+      href="imageassets/websiteassets/logo.png" />
+</head>
 <body>
-</body>
+    <div class="topnav">
 
-P R V D Nepal
+        <img src="imageassets/websiteassets/logo.png" class="logoleft"> 
+        <a class="active" href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Our Solutions</a>
+        <a href="#">Our Services</a>
+        <a href="#">Our Vacancies</a>
+        <a href="executiveteam.html">Our Team</a>
+        <a href="contactus.html">Contact Us</a>
+        <div class="sociallink">
+            <img src="imageassets/websiteassets/facebook.png" class="sociallinkimage"> 
+            <img src="imageassets/websiteassets/twitter.png" class="sociallinkimage"> 
+            <img src="imageassets/websiteassets/linkedin.png" class="sociallinkimage"> 
+            <img src="imageassets/websiteassets/youtube.png" class="sociallinkimage"> 
+            <img src="imageassets/websiteassets/instagram.png" class="sociallinkimage"> 
+        </div>
+        
+      </div> 
+      
+        <!--
+          <div class="video-container">
+            <video autoplay muted loop id="video">
+                <source src="videoassets/main1.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+              </video>
+          </div>
+        -->
+
+
+        <div class="slideshow-container">
+
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 4</div>
+            <img src="imageassets/homepagesliders/slider1.png" style="width:100%" class="imgslider">
+            <div class="text">Industry Lead Ideas</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 4</div>
+            <img src="imageassets/homepagesliders/slider2.jpg" style="width:100%" class="imgslider">
+            <div class="text">World Class Innovation</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 4</div>
+            <img src="imageassets/homepagesliders/slider3.jpg" style="width:100%" class="imgslider">
+            <div class="text">Leading Consultancy</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">4 / 4</div>
+            <img src="imageassets/homepagesliders/slider4.png" style="width:100%" class="imgslider">
+            <div class="text">From the foothill of Nepal</div>
+          </div>
+          
+          <a class="prev" onclick="plusClicked(-1)">&#10094;</a>
+          <a class="next" onclick="plusClicked(1)">&#10095;</a>
+          
+          </div>
+          <br>
+          
+          <div style="text-align:center">
+            <span class="dot" onclick="currentClicked(1)"></span> 
+            <span class="dot" onclick="currentClicked(2)"></span> 
+            <span class="dot" onclick="currentClicked(3)"></span> 
+            <span class="dot" onclick="currentClicked(4)"></span> 
+          </div>
+              
+          <div class="content-container">
+            <h1 class="contentheader">
+              We are Software and Technology Company that focuses on creating world class systems and provide consultancy relating any Software Technologies and Industry Leading ideas.
+            </h1>
+            <img src="imageassets/homepagesliders/allprogramming.jpg" class="center"> 
+                  
+          </div>
+<div class = "footer">
+  <p><span>&#169;</span> All Rights Reserved, PRVD Nepal 2022. <a href="privacyandlegal.html">Privacy and Legal</a></p> 
+  <div class="footersociallink">
+    <img src="imageassets/websiteassets/facebook.png" class="footersociallinkimage"> 
+    <img src="imageassets/websiteassets/twitter.png" class="footersociallinkimage"> 
+    <img src="imageassets/websiteassets/linkedin.png" class="footersociallinkimage"> 
+    <img src="imageassets/websiteassets/youtube.png" class="footersociallinkimage"> 
+    <img src="imageassets/websiteassets/instagram.png" class="footersociallinkimage"> 
+    </div>
+</div>
+</div>
+</body>
 </html>
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  // setTimeout( function(){ showSlides(slideIndex); console.log(slideIndex); } ,1000);
+
+  // setTimeout( function(){ plusSlides(1); console.log(slideIndex); } ,3000);
+  var tout;
+
+  function plusClicked(n){
+    clearTimeout(tout);
+    plusSlides(n);
+  }
+
+  function currentClicked(n){
+    clearTimeout(tout);
+    currentSlide(n);
+  }
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    
+    
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+
+    // setTimeout( function(){ showSlides(slideIndex += n); console.log(slideIndex); } ,3000);
+
+    tout = setTimeout(plusSlides,3000,1);
+  }
+
+  
+  </script>     
